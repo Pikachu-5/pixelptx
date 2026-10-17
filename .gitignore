@@ -1,0 +1,15 @@
+build/
+.tools/
+.artifacts/
+premium-audit.json
+node_modules/
+azure.local.json
+*.cubin
+*.ptx
+*.sass
+build-*/
+output/
+tmp/
+.env
+.env.*
+!.env.example
