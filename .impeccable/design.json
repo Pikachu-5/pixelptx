@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T16:07:56.494Z",
+  "title": "Design System: PixelPTX",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Pale Slate Workspace",
+        "tonalRamp": [
+          "oklch(15% 0.00688 247.90)",
+          "oklch(26.43% 0.00688 247.90)",
+          "oklch(37.86% 0.00688 247.90)",
+          "oklch(49.29% 0.00688 247.90)",
+          "oklch(60.71% 0.00688 247.90)",
+          "oklch(72.14% 0.00688 247.90)",
+          "oklch(83.57% 0.00688 247.90)",
+          "oklch(95% 0.00688 247.90)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Instrument White",
+        "tonalRamp": [
+          "oklch(15% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95% 0.00000 89.88)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "tonalRamp": [
+          "oklch(15% 0.04360 248.35)",
+          "oklch(26.43% 0.04360 248.35)",
+          "oklch(37.86% 0.04360 248.35)",
+          "oklch(49.29% 0.04360 248.35)",
+          "oklch(60.71% 0.04360 248.35)",
+          "oklch(72.14% 0.04360 248.35)",
+          "oklch(83.57% 0.04360 248.35)",
+          "oklch(95% 0.04360 248.35)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Slate Labels",
+        "tonalRamp": [
+          "oklch(15% 0.03755 245.80)",
+          "oklch(26.43% 0.03755 245.80)",
+          "oklch(37.86% 0.03755 245.80)",
+          "oklch(49.29% 0.03755 245.80)",
+          "oklch(60.71% 0.03755 245.80)",
+          "oklch(72.14% 0.03755 245.80)",
+          "oklch(83.57% 0.03755 245.80)",
+          "oklch(95% 0.03755 245.80)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Pale Slate Divider",
+        "tonalRamp": [
+          "oklch(15% 0.01465 244.73)",
+          "oklch(26.43% 0.01465 244.73)",
+          "oklch(37.86% 0.01465 244.73)",
+          "oklch(49.29% 0.01465 244.73)",
+          "oklch(60.71% 0.01465 244.73)",
+          "oklch(72.14% 0.01465 244.73)",
+          "oklch(83.57% 0.01465 244.73)",
+          "oklch(95% 0.01465 244.73)"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Execution Teal",
+        "tonalRamp": [
+          "oklch(15% 0.08788 185.48)",
+          "oklch(26.43% 0.08788 185.48)",
+          "oklch(37.86% 0.08788 185.48)",
+          "oklch(49.29% 0.08788 185.48)",
+          "oklch(60.71% 0.08788 185.48)",
+          "oklch(72.14% 0.08788 185.48)",
+          "oklch(83.57% 0.08788 185.48)",
+          "oklch(95% 0.08788 185.48)"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "Soft Execution Teal",
+        "tonalRamp": [
+          "oklch(15% 0.01715 174.05)",
+          "oklch(26.43% 0.01715 174.05)",
+          "oklch(37.86% 0.01715 174.05)",
+          "oklch(49.29% 0.01715 174.05)",
+          "oklch(60.71% 0.01715 174.05)",
+          "oklch(72.14% 0.01715 174.05)",
+          "oklch(83.57% 0.01715 174.05)",
+          "oklch(95% 0.01715 174.05)"
+        ]
+      },
+      "comparison": {
+        "role": "secondary",
+        "displayName": "Comparison Rust",
+        "tonalRamp": [
+          "oklch(15% 0.11512 44.60)",
+          "oklch(26.43% 0.11512 44.60)",
+          "oklch(37.86% 0.11512 44.60)",
+          "oklch(49.29% 0.11512 44.60)",
+          "oklch(60.71% 0.11512 44.60)",
+          "oklch(72.14% 0.11512 44.60)",
+          "oklch(83.57% 0.11512 44.60)",
+          "oklch(95% 0.11512 44.60)"
+        ]
+      },
+      "editor": {
+        "role": "neutral",
+        "displayName": "Navy Source Well",
+        "tonalRamp": [
+          "oklch(15% 0.03875 245.19)",
+          "oklch(26.43% 0.03875 245.19)",
+          "oklch(37.86% 0.03875 245.19)",
+          "oklch(49.29% 0.03875 245.19)",
+          "oklch(60.71% 0.03875 245.19)",
+          "oklch(72.14% 0.03875 245.19)",
+          "oklch(83.57% 0.03875 245.19)",
+          "oklch(95% 0.03875 245.19)"
+        ]
+      },
+      "editor-ink": {
+        "role": "neutral",
+        "displayName": "Pale Code Ink",
+        "tonalRamp": [
+          "oklch(15% 0.01597 239.11)",
+          "oklch(26.43% 0.01597 239.11)",
+          "oklch(37.86% 0.01597 239.11)",
+          "oklch(49.29% 0.01597 239.11)",
+          "oklch(60.71% 0.01597 239.11)",
+          "oklch(72.14% 0.01597 239.11)",
+          "oklch(83.57% 0.01597 239.11)",
+          "oklch(95% 0.01597 239.11)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Diagnostic Red",
+        "tonalRamp": [
+          "oklch(15% 0.17911 20.27)",
+          "oklch(26.43% 0.17911 20.27)",
+          "oklch(37.86% 0.17911 20.27)",
+          "oklch(49.29% 0.17911 20.27)",
+          "oklch(60.71% 0.17911 20.27)",
+          "oklch(72.14% 0.17911 20.27)",
+          "oklch(83.57% 0.17911 20.27)",
+          "oklch(95% 0.17911 20.27)"
+        ]
+      },
+      "scrollbar": {
+        "role": "neutral",
+        "displayName": "Slate Scrollbar",
+        "tonalRamp": [
+          "oklch(15% 0.03413 243.94)",
+          "oklch(26.43% 0.03413 243.94)",
+          "oklch(37.86% 0.03413 243.94)",
+          "oklch(49.29% 0.03413 243.94)",
+          "oklch(60.71% 0.03413 243.94)",
+          "oklch(72.14% 0.03413 243.94)",
+          "oklch(83.57% 0.03413 243.94)",
+          "oklch(95% 0.03413 243.94)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "sans": {
+        "displayName": "Windows body sans",
+        "purpose": "Body, action labels, notes and interface labels."
+      },
+      "heading": {
+        "displayName": "Instrument headings",
+        "purpose": "Page heading, panel headings and brand."
+      },
+      "mono": {
+        "displayName": "Compiler monospace",
+        "purpose": "Expressions, registers, instructions and numeric outputs."
+      }
+    },
+    "motion": [
+      {
+        "name": "action-background",
+        "value": "background .15s",
+        "purpose": "Observed button background transition; disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-workspace",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-columns",
+        "value": "1200px"
+      },
+      {
+        "name": "source-above-visuals",
+        "value": "1050px"
+      },
+      {
+        "name": "stacked-images",
+        "value": "620px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Compile action",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Filled action for explicit compilation; the source-panel instance expands to full width and 42px minimum height.",
+      "html": "<button class=\"ds-button ds-primary\">Compile to PTX</button>",
+      "css": ".ds-button { display: inline-flex; gap: 8px; align-items: center; justify-content: center; min-height: 35px; padding: 7px 12px; border-radius: var(--radius-control); border: 1px solid transparent; font: 600 12px var(--font-sans); white-space: nowrap; cursor: pointer; transition: background .15s; } .ds-button:disabled { cursor: not-allowed; opacity: .46; } .ds-button:active:not(:disabled) { translate: 0 1px; } .ds-button:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; } @media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } } .ds-primary { background: var(--color-primary); color: var(--color-surface); } .ds-primary:hover:not(:disabled) { filter: brightness(.88); }"
+    },
+    {
+      "name": "Outline action",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Secondary actions such as exporting current compiler output.",
+      "html": "<button class=\"ds-button ds-outline\">Export PTX</button>",
+      "css": ".ds-button { display: inline-flex; gap: 8px; align-items: center; justify-content: center; min-height: 35px; padding: 7px 12px; border-radius: var(--radius-control); border: 1px solid transparent; font: 600 12px var(--font-sans); white-space: nowrap; cursor: pointer; transition: background .15s; } .ds-button:disabled { cursor: not-allowed; opacity: .46; } .ds-button:active:not(:disabled) { translate: 0 1px; } .ds-button:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; } @media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } } .ds-outline { border-color: var(--color-border); background: var(--color-surface); color: var(--color-ink); } .ds-outline:hover:not(:disabled) { background: var(--color-primary-soft); border-color: var(--color-primary); }"
+    },
+    {
+      "name": "Quiet action",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Low-emphasis inspection and utility actions.",
+      "html": "<button class=\"ds-button ds-quiet\">Present</button>",
+      "css": ".ds-button { display: inline-flex; gap: 8px; align-items: center; justify-content: center; min-height: 35px; padding: 7px 12px; border-radius: var(--radius-control); border: 1px solid transparent; font: 600 12px var(--font-sans); white-space: nowrap; cursor: pointer; transition: background .15s; } .ds-button:disabled { cursor: not-allowed; opacity: .46; } .ds-button:active:not(:disabled) { translate: 0 1px; } .ds-button:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; } @media (prefers-reduced-motion: reduce) { .ds-button { transition: none; } } .ds-quiet { color: var(--color-ink); background: transparent; } .ds-quiet:hover:not(:disabled) { background: var(--color-background); }"
+    },
+    {
+      "name": "Source well",
+      "kind": "input",
+      "refersTo": "source",
+      "description": "Persistent navy source textarea with a visible focus-within ring. Inline diagnostics belong below the well.",
+      "html": "<div class=\"ds-editor\"><label class=\"ds-caption\" for=\"ds-source\">Scalar expression</label><textarea class=\"ds-source\" id=\"ds-source\" spellcheck=\"false\">pixel * 1.2 + 0.1</textarea><div class=\"ds-editor-footer\"><span>float32</span><span>Ctrl + Enter</span></div></div>",
+      "css": ".ds-editor { background: var(--color-editor); border-radius: var(--radius-control); color: var(--color-editor-ink); overflow: hidden; } .ds-caption { display: block; font: 11px var(--font-mono); padding: 15px 13px 0; color: var(--color-editor-ink); opacity: .75; white-space: nowrap; } .ds-source { box-sizing: border-box; width: 100%; min-height: 155px; resize: none; border: none; padding: 13px; background: transparent; color: var(--color-editor-ink); caret-color: var(--color-editor-ink); font: 12px/1.9 var(--font-mono); tab-size: 2; } .ds-editor:focus-within { outline: 2px solid var(--color-primary); outline-offset: 3px; } .ds-source:focus-visible { outline: none; } .ds-editor-footer { display: flex; justify-content: space-between; padding: 8px 13px; font: 11px var(--font-sans); border-top: 1px solid var(--color-muted); color: var(--color-editor-ink); }"
+    },
+    {
+      "name": "Compiler stage navigation",
+      "kind": "nav",
+      "refersTo": "stage-navigation",
+      "description": "Horizontal stage buttons retain selected state with aria-pressed; overflow scrolls on narrow screens.",
+      "html": "<nav class=\"ds-pipeline\" aria-label=\"Compiler stages\"><button class=\"ds-stage\" aria-pressed=\"false\"><span class=\"ds-index\">1</span><span>AST<small class=\"ds-stage-note\">Source structure</small></span></button><button class=\"ds-stage\" aria-pressed=\"true\"><span class=\"ds-index\">2</span><span>Optimizer<small class=\"ds-stage-note\">Float32 rewrites</small></span></button></nav>",
+      "css": ".ds-pipeline { display: flex; align-items: center; padding: 8px; gap: 6px; border: 1px solid var(--color-border); border-radius: var(--radius-DEFAULT); background: var(--color-surface); overflow: auto; } .ds-stage { display: flex; flex: 1; align-items: center; text-align: left; gap: 12px; background: transparent; color: var(--color-ink); border: 1px solid transparent; padding: 10px 16px; border-radius: var(--radius-control); min-width: 144px; font: 600 14px var(--font-sans); cursor: pointer; } .ds-stage-note { display: block; font-size: 11px; font-weight: 400; margin-top: 2px; color: var(--color-muted); } .ds-index { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; font: 400 12px var(--font-mono); } .ds-stage[aria-pressed=true] { background: var(--color-primary-soft); color: var(--color-primary); } .ds-stage[aria-pressed=true] .ds-index { background: var(--color-primary); color: var(--color-surface); border-color: var(--color-primary); } .ds-stage:hover { background: var(--color-background); } .ds-stage:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; } .ds-stage:active { translate: 0 1px; }"
+    },
+    {
+      "name": "Preview status badges",
+      "kind": "chip",
+      "description": "Static CPU status and stale-source labels. Stale output remains visible while exports are disabled.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge\">CPU preview</span><span class=\"ds-badge ds-stale\">Source changed</span></div>",
+      "css": ".ds-badges { display: flex; gap: 8px; flex-wrap: wrap; } .ds-badge { font: 11px var(--font-sans); background: var(--color-primary-soft); color: var(--color-primary); border-radius: var(--radius-control); padding: 3px 7px; } .ds-stale { color: var(--color-comparison); background: var(--color-background); }"
+    },
+    {
+      "name": "Instrument panel",
+      "kind": "card",
+      "description": "Flat white panel with a thin divider and no shadow; the example uses inspector padding.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-panel-heading\"><h2 class=\"ds-panel-title\">Compiler inspector</h2><p class=\"ds-panel-note\">Trace output back to source.</p></div><div class=\"ds-panel-body\">Select a stage to inspect its representation.</div></section>",
+      "css": ".ds-panel { background: var(--color-surface); color: var(--color-ink); border: 1px solid var(--color-border); border-radius: var(--radius-DEFAULT); min-width: 0; font: 14px/1.5 var(--font-sans); } .ds-panel-heading { padding: 21px 24px 17px; border-bottom: 1px solid var(--color-border); } .ds-panel-title { margin: 0; font: 600 17px var(--font-heading); letter-spacing: -.015em; } .ds-panel-note { margin: 5px 0 0; color: var(--color-muted); font-size: 11px; } .ds-panel-body { padding: 21px 24px; }"
+    },
+    {
+      "name": "AST node",
+      "kind": "button",
+      "refersTo": "diagram",
+      "description": "Compact keyboard-operable source-linked node. Pixel input uses the teal selected treatment.",
+      "html": "<button class=\"ds-node ds-pixel\" aria-label=\"Pixel input, source range 0 to 5\">pixel</button>",
+      "css": ".ds-node { width: 84px; height: 38px; background: var(--color-surface); color: var(--color-ink); border: 1px solid var(--color-border); border-radius: var(--radius-control); font: 12px var(--font-mono); cursor: pointer; } .ds-node:hover, .ds-node:focus-visible { border-color: var(--color-primary); background: var(--color-primary-soft); } .ds-node:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; } .ds-node:active { translate: 0 1px; } .ds-node.ds-pixel { background: var(--color-primary-soft); border-color: var(--color-primary); color: var(--color-primary); }"
+    },
+    {
+      "name": "Float32 trace row",
+      "kind": "button",
+      "description": "Register, operation and aligned output share one selectable row; current instruction is filled softly.",
+      "html": "<button class=\"ds-trace ds-current\"><span class=\"ds-register\">%f2</span><span class=\"ds-operation\">mul.f32 %f1, 1.2</span><output class=\"ds-result\">0.600000</output></button>",
+      "css": ".ds-trace { display: grid; width: 100%; grid-template-columns: 55px minmax(0,1fr) 85px; align-items: center; gap: 10px; text-align: left; color: var(--color-ink); background: transparent; border: 0; border-bottom: 1px solid var(--color-border); padding: 10px; font: 12px var(--font-mono); cursor: pointer; } .ds-trace:hover { background: var(--color-background); } .ds-trace.ds-current { background: var(--color-primary-soft); } .ds-register, .ds-result { color: var(--color-primary); } .ds-result { text-align: right; font-family: var(--font-mono); } .ds-operation { overflow-wrap: anywhere; } .ds-trace:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; } .ds-trace:active { translate: 0 1px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "digital imaging test instrument",
+    "overview": "Product register: a local engineering workbench for exploring image filters and compiler stages. Its reference is a digital imaging test instrument: calibrated input and output, a visible signal path, and a probe that traces one value. English technical vocabulary follows the compiler. The memorable interaction is selecting a compiler node or instruction and tracing it back to the source and through float32 registers.\n\nAssumed visual direction, chosen for legibility while presenting: pale slate workspace, white instrument surfaces, a navy source well, teal for active execution, and rust for before/after comparison. Avoid marketing hero layouts, invented benchmarks, neon GPU branding, and decorative charts.",
+    "keyCharacteristics": [],
+    "rules": [],
+    "dos": [
+      "Show actual C++ compilation output and actual instruction counts.",
+      "Keep execution backend and verification scope visible.",
+      "Preserve entered source on errors and ignore stale async results."
+    ],
+    "donts": [
+      "Do not imply NVIDIA execution from a successful offline assembly.",
+      "Do not claim fewer PTX instructions automatically improve GPU performance."
+    ]
+  }
+}
