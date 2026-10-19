@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#edf1f5">
+  <title>PixelPTX — Visual compiler workbench</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23087c73'/%3E%3Cpath d='M8 8h10v7H8zm6 10h10v7H14z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#source">Skip to filter source</a>
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="PixelPTX home"><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8"/><path d="M9 8h10v8H9zm6 10h10v8H15z"/></svg><span>Pixel<span class="brand-suffix">PTX</span></span></a>
+    <span class="header-description">A tiny language. A real compiler.</span>
+    <div class="runtime-tag"><span class="status-dot"></span>Local CPU preview</div>
+    <button id="presentation" class="button quiet" aria-pressed="false">Present</button>
+  </header>
+  <main>
+    <div class="workspace-title"><div><h1>See your code become instructions.</h1><p>Write a filter. Follow every transformation. Inspect what reaches the GPU.</p></div><div class="target-label"><span>Compilation target</span><strong>PTX 7.0 <span aria-hidden="true">/</span> sm_75</strong></div></div>
+    <nav class="pipeline" aria-label="Compilation stages">
+      <button data-stage="ast" aria-pressed="false"><span class="stage-index">1</span><span>Parse<small>Expression tree</small></span></button><span class="pipeline-arrow" aria-hidden="true">→</span>
+      <button data-stage="optimizer" aria-pressed="true"><span class="stage-index">2</span><span>Optimize<small>Safe rewrites</small></span></button><span class="pipeline-arrow" aria-hidden="true">→</span>
+      <button data-stage="ir" aria-pressed="false"><span class="stage-index">3</span><span>Lower<small>Register IR</small></span></button><span class="pipeline-arrow" aria-hidden="true">→</span>
+      <button data-stage="ptx" aria-pressed="false"><span class="stage-index">4</span><span>Emit<small>NVIDIA PTX</small></span></button><span class="pipeline-arrow" aria-hidden="true">→</span>
+      <button data-stage="binary" aria-pressed="false"><span class="stage-index">5</span><span>Assemble<small>CUBIN / SASS</small></span></button>
+    </nav>
+    <div class="workspace">
+      <aside class="source-column">
+        <section class="panel source-panel" aria-labelledby="source-heading">
+          <div class="panel-heading"><h2 id="source-heading">Filter source</h2><span class="file-label">filter.pxp</span></div>
+          <div class="presets" aria-label="Example filters"><button data-preset="brightness" aria-pressed="true">Brightness</button><button data-preset="contrast" aria-pressed="false">Contrast</button><button data-preset="invert" aria-pressed="false">Invert</button><button data-preset="fold" aria-pressed="false">Fold constants</button></div>
+          <label class="sr-only" for="source">Image filter expression</label>
+          <div class="editor-wrap"><span class="editor-caption">// one expression, every color channel</span><textarea id="source" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="source-help diagnostic" maxlength="8192">out = clamp(
+  pixel * 1.0 + 0.25,
+  0.0, 1.0
+);</textarea><div class="editor-footer"><span>C++ compiler · float32</span><span id="source-size">0 bytes</span></div></div>
+          <p id="diagnostic" class="diagnostic" role="alert"></p>
+          <button id="compile" class="button primary compile-button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6Z"/></svg><span>Compile &amp; run</span><kbd>Ctrl ↵</kbd></button>
+          <p id="source-help" class="source-help">Use <code>pixel</code>, numbers, <code>+ − *</code>, <code>clamp</code>, <code>min</code>, <code>max</code>, and <code>abs</code>.</p>
+        </section>
+        <section class="panel probe-panel" aria-labelledby="probe-heading">
+          <div class="panel-heading"><h2 id="probe-heading">Probe one channel</h2><output id="pixel-value" for="pixel">0.400</output></div>
+          <label for="pixel" class="muted">Input intensity</label><input id="pixel" type="range" min="0" max="1" step="0.01" value="0.4">
+          <div class="probe-values"><div><span>Input</span><strong id="probe-in">0.400</strong></div><svg viewBox="0 0 36 16" aria-hidden="true"><path d="M0 8h32m-7-6 7 6-7 6"/></svg><div><span>Output</span><strong id="probe-out">—</strong></div></div>
+          <canvas id="curve" width="560" height="260" role="img" aria-label="Transfer curve showing input intensity versus output intensity"></canvas>
+          <p class="small-note">Transfer curve · displayed range 0–1</p>
+        </section>
+        <section class="explanation"><h2>What is running?</h2><p>Your C++ compiler emits real PTX. This preview executes its <strong>register IR on the CPU</strong> and checks it against the original AST.</p><p>Use <strong>Run on Azure GPU</strong> to execute that PTX on a temporary NVIDIA T4. Editing and compiling locally never starts cloud compute.</p></section>
+      </aside>
+      <div class="visual-column">
+        <section class="panel preview-panel" aria-labelledby="preview-heading">
+          <div class="panel-heading"><div class="title-with-note"><h2 id="preview-heading">The same image. Your transformation.</h2><span id="preview-state" class="badge">Waiting for compiler</span></div><div class="image-actions"><input type="file" id="image-file" accept="image/png,image/jpeg,image/webp" hidden><button id="upload" class="button quiet">Open image</button><button id="reset-image" class="button quiet" hidden>Reset</button><button id="save-image" class="button quiet" disabled>Save PNG</button></div></div>
+          <div class="image-pair"><figure><div class="image-frame"><canvas id="input-image" width="352" height="220" role="img" aria-label="Original procedural color study"></canvas></div><figcaption><span><span class="image-label">Input</span><span id="image-name">Procedural color study · synthetic</span></span><span class="file-label">RGB / 8-bit</span></figcaption></figure><figure><div class="image-frame"><canvas id="output-image" width="352" height="220" role="img" aria-label="Image after applying the compiled filter on the CPU"></canvas><span class="image-overlay" id="image-overlay">Compile a filter to render</span></div><figcaption><span><span class="image-label">Output</span><span>Compiled IR · CPU</span></span><span id="image-dimensions" class="file-label">352 × 220</span></figcaption></figure></div>
+          <div class="verification-bar"><span id="verification">Awaiting reference comparison</span><span id="render-timing">No GPU timings</span></div>
+        </section>
+        <section class="panel gpu-panel" aria-labelledby="gpu-heading">
+          <div class="panel-heading"><div><h2 id="gpu-heading">Run the PTX on NVIDIA hardware.</h2><p class="small-note">Azure Batch Spot · one T4 · temporary compute</p></div><span id="gpu-badge" class="badge">GPU off</span></div>
+          <p id="gpu-help" class="small-note">The GPU starts only for an explicit run. Allocation can take minutes. Azure may reclaim Spot capacity.</p>
+          <label class="gpu-consent"><input type="checkbox" id="gpu-consent"><span>Upload this image and filter to Azure and use my credit. Compute is billed while allocated, including startup and deletion. A 15-minute attempt limit and automatic cleanup apply; this is not a hard spending cap.</span></label>
+          <div class="gpu-actions"><button id="gpu-run" class="button primary" disabled>Run on Azure GPU</button><button id="gpu-cancel" class="button outline" hidden>Cancel &amp; delete compute</button><button id="gpu-retry-cleanup" class="button outline" hidden>Retry cleanup</button><button id="gpu-refresh" class="button quiet">Check status</button><button id="gpu-save" class="button quiet" disabled>Save GPU PNG</button></div>
+          <p id="gpu-status" class="gpu-status" role="status" aria-live="polite">Checking local Azure configuration…</p>
+          <ol id="gpu-progress" class="gpu-progress" aria-label="GPU run stages" hidden></ol>
+          <div id="gpu-result" class="gpu-result" hidden><figure><div class="image-frame"><canvas id="gpu-image" width="352" height="220" role="img" aria-label="Result produced by generated PTX on the remote NVIDIA GPU"></canvas></div><figcaption id="gpu-caption">GPU output</figcaption></figure><div><p id="gpu-summary"></p><dl id="gpu-metrics" class="gpu-metrics"></dl><p class="small-note">CUDA events measure a single kernel launch. Startup, JIT compilation, transfers, and cloud round trip are separate. These timings are not a speedup benchmark.</p><details><summary>Run evidence</summary><pre id="gpu-evidence" class="binary-log"></pre></details></div></div>
+        </section>
+        <section class="panel inspector" aria-labelledby="inspector-heading">
+          <div class="panel-heading inspector-header"><div><h2 id="inspector-heading">Optimization, made visible.</h2><p id="inspector-subtitle">Each rewrite is recorded by the C++ optimizer.</p></div><button id="export-ptx" class="button outline" disabled>Export PTX <span aria-hidden="true">↓</span></button></div>
+          <div id="inspector-body" class="inspector-body"><p class="empty-state">Compiling your first filter…</p></div>
+        </section>
+        <div class="status-strip"><span id="status" role="status" aria-live="polite">Starting local compiler…</span><span>C++20 → PTX <span aria-hidden="true">↗</span></span></div>
+      </div>
+    </div>
+    <footer>PixelPTX <span>Compiler engineering, one pixel at a time.</span><a href="https://docs.nvidia.com/cuda/parallel-thread-execution/" target="_blank" rel="noreferrer">PTX ISA reference ↗</a></footer>
+  </main>
+</body>
+</html>

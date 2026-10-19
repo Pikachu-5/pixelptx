@@ -1,0 +1,22 @@
+/* Generated from DESIGN.md by scripts/tokens.mjs. */
+:root {
+  --color-background: #edf1f5;
+  --color-surface: #ffffff;
+  --color-ink: #192d40;
+  --color-muted: #536779;
+  --color-border: #d7e0e8;
+  --color-primary: #08766d;
+  --color-primary-soft: #e5f4ef;
+  --color-comparison: #a0522d;
+  --color-editor: #182b3b;
+  --color-editor-ink: #e4eff7;
+  --color-error: #b42336;
+  --color-scrollbar: #8195a6;
+  --font-sans: Segoe UI, sans-serif;
+  --font-heading: Bahnschrift, Segoe UI, sans-serif;
+  --font-mono: Cascadia Code, Consolas, monospace;
+  --radius-DEFAULT: 12px;
+  --radius-control: 6px;
+  --space-page-max: 1560px;
+  --space-panel: 24px;
+}
