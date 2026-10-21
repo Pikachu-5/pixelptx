@@ -1,0 +1,17 @@
+{
+  "name": "pixelptx",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A C++20 image-filter compiler and visual PTX explorer",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/server.mjs",
+    "azure:configure": "node scripts/azure-configure.mjs",
+    "azure:cleanup": "node scripts/azure-cleanup.mjs",
+    "dev": "node scripts/build.mjs && node scripts/server.mjs",
+    "test": "node scripts/build.mjs && ctest --test-dir build --output-on-failure && node --test tests/server.test.mjs tests/azure.test.mjs",
+    "check": "node --check web/app.js && node --check web/gpu.js && node --check scripts/server.mjs && node --check scripts/azure.mjs && node scripts/tokens.mjs --check"
+  },
+  "engines": { "node": ">=20.3" }
+}
